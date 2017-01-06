@@ -13,7 +13,9 @@ make
 # Useful links:
 [Head First Design Patterns book](http://shop.oreilly.com/product/9780596007126.do)
 
-[A strategy pattern implementation in c++ by r3dux.org ](http://r3dux.org/2011/07/an-example-implementation-of-the-strategy-design-pattern-in-c/)
+[Head First Design Patterns java code on github](https://github.com/bethrobson/Head-First-Design-Patterns.git)
+
+[A strategy pattern implementation in C++ by r3dux.org ](http://r3dux.org/2011/07/an-example-implementation-of-the-strategy-design-pattern-in-c/)
 
 [An observer pattern implementation in C++ by sourcemaking.com (there are other patterns  on this page too)](https://sourcemaking.com/design_patterns/observer/cpp/3)
 
