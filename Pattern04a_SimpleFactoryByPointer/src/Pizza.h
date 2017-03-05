@@ -20,14 +20,15 @@ protected:
     std::string _sauce;
     std::vector<std::string> _toppings;
 public:
-    virtual ~Pizza(){};
+    virtual ~Pizza();
+    //~Pizza();
 
-    std::string getName();
-    void prepare();
-    void bake();
-    void cut();
-    void box();
-    std::string niceDescription();
+    virtual std::string getName();
+    virtual void prepare();
+    virtual void bake();
+    virtual void cut();
+    virtual void box();
+    virtual std::string niceDescription();
 };
 
 #endif
