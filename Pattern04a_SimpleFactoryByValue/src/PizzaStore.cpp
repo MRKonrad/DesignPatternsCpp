@@ -13,9 +13,7 @@ PizzaStore::PizzaStore(SimplePizzaFactory &factory) {
 }
 
 Pizza PizzaStore::orderPizza(std::string type) {
-    Pizza pizza;
-
-    pizza = _factory.createPizza(type);
+    Pizza pizza = _factory.createPizza(type);
 
     pizza.prepare();
     pizza.bake();
