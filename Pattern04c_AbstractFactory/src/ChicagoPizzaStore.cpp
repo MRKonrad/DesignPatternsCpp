@@ -2,7 +2,7 @@
 //  ChicagoPizzaStore.cpp
 //  DesignPatternsCPP
 //
-//  Created by Konrad Werys on 05/03/16.
+//  Created by Konrad Werys on 05/03/17.
 //  Copyright © 2016 Konrad Werys. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 Pizza* ChicagoPizzaStore::createPizza(std::string type){
 
-    PizzaIngredientFactory *_ingredientFactory = new ChicagoPizzaIngredientFactory();
+    _ingredientFactory = new ChicagoPizzaIngredientFactory();
     Pizza* pizza = nullptr;
 
     if (type == "cheese") {
@@ -27,6 +27,12 @@ Pizza* ChicagoPizzaStore::createPizza(std::string type){
         pizza->setName("Chicago Style Veggie Pizza");
     }
 
-    //delete _ingredientFactory;
     return pizza;
+}
+
+ChicagoPizzaStore::~ChicagoPizzaStore(){
+    printf("ChicagoPizzaStore destructor\n");
+    if (_ingredientFactory != nullptr){
+        delete _ingredientFactory;
+    }
 }

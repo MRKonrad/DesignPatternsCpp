@@ -19,8 +19,10 @@
 
 class PizzaStore {
 public:
+    PizzaIngredientFactory *_ingredientFactory = nullptr;
     Pizza* orderPizza(std::string type);
 protected:
+    virtual ~PizzaStore();
     virtual Pizza* createPizza(std::string type) = 0;
 };
 

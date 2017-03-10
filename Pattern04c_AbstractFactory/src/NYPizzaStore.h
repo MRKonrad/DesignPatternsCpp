@@ -13,6 +13,8 @@
 #include "NYPizzaIngredientFactory.h"
 
 class NYPizzaStore : public PizzaStore {
+public:
+    ~NYPizzaStore() override;
 protected:
     virtual Pizza* createPizza(std::string type) override;
 };

@@ -14,6 +14,8 @@
 
 class ChicagoPizzaStore : public PizzaStore {
 public:
+    ~ChicagoPizzaStore();
+public:
     virtual Pizza* createPizza(std::string type) override;
 };
 

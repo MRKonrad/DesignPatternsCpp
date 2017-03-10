@@ -2,7 +2,7 @@
 //  NYPizzaStore.cpp
 //  DesignPatternsCPP
 //
-//  Created by Konrad Werys on 05/03/16.
+//  Created by Konrad Werys on 05/03/17.
 //  Copyright © 2016 Konrad Werys. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 Pizza* NYPizzaStore::createPizza(std::string type){
 
-    PizzaIngredientFactory *_ingredientFactory = new NYPizzaIngredientFactory();
+    _ingredientFactory = new NYPizzaIngredientFactory();
     Pizza* pizza = nullptr;
 
     if (type == "cheese") {
@@ -26,5 +26,13 @@ Pizza* NYPizzaStore::createPizza(std::string type){
         pizza = new VeggiePizza(_ingredientFactory);
         pizza->setName("NY Style Veggie Pizza");
     }
+    
     return pizza;
+}
+
+NYPizzaStore::~NYPizzaStore(){
+    printf("NYPizzaStore destructor\n");
+    if (_ingredientFactory != nullptr){
+        delete _ingredientFactory;
+    }
 }

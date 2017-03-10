@@ -18,27 +18,35 @@ int main()
 
     Pizza *pizza = nyStore.orderPizza("cheese");
     printf("Ethan ordered a %s \n", pizza->getName().c_str());
-
+    delete pizza;
+    
     pizza = chicagoStore.orderPizza("cheese");
     printf("Joel ordered a %s \n", pizza->getName().c_str());
+    delete pizza;
 
     pizza = nyStore.orderPizza("clam");
     printf("Ethan ordered a %s \n", pizza->getName().c_str());
+    delete pizza;
 
     pizza = chicagoStore.orderPizza("clam");
     printf("Joel ordered a %s \n", pizza->getName().c_str());
+    delete pizza;
 
     pizza = nyStore.orderPizza("pepperoni");
     printf("Ethan ordered a %s \n", pizza->getName().c_str());
+    delete pizza;
 
     pizza = chicagoStore.orderPizza("pepperoni");
     printf("Joel ordered a %s \n", pizza->getName().c_str());
+    delete pizza;
 
     pizza = nyStore.orderPizza("veggie");
     printf("Ethan ordered a %s \n", pizza->getName().c_str());
+    delete pizza;
 
     pizza = chicagoStore.orderPizza("veggie");
     printf("Joel ordered a %s \n", pizza->getName().c_str());
+    delete pizza;
 
     return 0;
 }
