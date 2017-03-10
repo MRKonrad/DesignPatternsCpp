@@ -24,12 +24,12 @@ class Pizza {
 protected:
     std::string _name;
 
-    Dough *_dough;
-    Sauce *_sauce;
-    std::vector<Veggies*> *_veggies;
-    Cheese *_cheese;
-    Pepperoni *_pepperoni;
-    Clam *_clam;
+    Dough *_dough = nullptr;
+    Sauce *_sauce = nullptr;
+    std::vector<Veggies*> *_veggies = nullptr;
+    Cheese *_cheese = nullptr;
+    Pepperoni *_pepperoni = nullptr;
+    Clam *_clam = nullptr;
 
 public:
     virtual ~Pizza(){};

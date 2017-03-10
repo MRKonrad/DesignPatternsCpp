@@ -30,15 +30,31 @@ void Pizza::cut(){
 
 void Pizza::box(){
     printf("Place pizza in official PizzaStore box %s\n", _name.c_str());
+    printf("Pizza decription:\n %s\n", niceDescription().c_str());
 }
 
 std::string Pizza::niceDescription(){
     std::string display;
     display.append("---- " + _name + " ----\n");
-    display.append(_dough->toString() + "\n");
-    display.append(_sauce->toString() + "\n");
-    // for (std::string topping : _toppings) {
-    //     display.append(topping + "\n");
-    // }
+    if (_dough != nullptr){
+        display.append(_dough->toString() + "\n");
+    }
+    if (_sauce != nullptr){
+        display.append(_sauce->toString() + "\n");
+    }
+    if (_cheese != nullptr){
+        display.append(_cheese->toString() + "\n");
+    }
+    if (_clam != nullptr){
+        display.append(_clam->toString() + "\n");
+    }
+    if (_pepperoni != nullptr){
+        display.append(_pepperoni->toString() + "\n");
+    }
+    if (_veggies != nullptr){
+        for (auto veggie : *_veggies){
+            display.append(veggie->toString() + "\n");
+        }
+    }
     return display;
 }

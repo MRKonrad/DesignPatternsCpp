@@ -13,32 +13,32 @@ int main()
 {
     printf("DesignPatternsCPP: an abstract factory\n");
 
-    // NYPizzaStore nyStore;
+    NYPizzaStore nyStore;
     ChicagoPizzaStore chicagoStore;
 
-    // Pizza pizza = nyStore.orderPizza("cheese");
-    // printf("Ethan ordered a %s \n", pizza.getName().c_str());
+    Pizza *pizza = nyStore.orderPizza("cheese");
+    printf("Ethan ordered a %s \n", pizza->getName().c_str());
 
-    Pizza *pizza = chicagoStore.orderPizza("cheese");
+    pizza = chicagoStore.orderPizza("cheese");
     printf("Joel ordered a %s \n", pizza->getName().c_str());
 
-    // pizza = nyStore.orderPizza("clam");
-    // printf("Ethan ordered a %s \n", pizza.getName().c_str());
-    //
-    // pizza = chicagoStore.orderPizza("clam");
-    // printf("Joel ordered a %s \n", pizza.getName().c_str());
-    //
-    // pizza = nyStore.orderPizza("pepperoni");
-    // printf("Ethan ordered a %s \n", pizza.getName().c_str());
-    //
-    // pizza = chicagoStore.orderPizza("pepperoni");
-    // printf("Joel ordered a %s \n", pizza.getName().c_str());
-    //
-    // pizza = nyStore.orderPizza("veggie");
-    // printf("Ethan ordered a %s \n", pizza.getName().c_str());
-    //
-    // pizza = chicagoStore.orderPizza("veggie");
-    // printf("Joel ordered a %s \n", pizza.getName().c_str());
+    pizza = nyStore.orderPizza("clam");
+    printf("Ethan ordered a %s \n", pizza->getName().c_str());
+
+    pizza = chicagoStore.orderPizza("clam");
+    printf("Joel ordered a %s \n", pizza->getName().c_str());
+
+    pizza = nyStore.orderPizza("pepperoni");
+    printf("Ethan ordered a %s \n", pizza->getName().c_str());
+
+    pizza = chicagoStore.orderPizza("pepperoni");
+    printf("Joel ordered a %s \n", pizza->getName().c_str());
+
+    pizza = nyStore.orderPizza("veggie");
+    printf("Ethan ordered a %s \n", pizza->getName().c_str());
+
+    pizza = chicagoStore.orderPizza("veggie");
+    printf("Joel ordered a %s \n", pizza->getName().c_str());
 
     return 0;
 }

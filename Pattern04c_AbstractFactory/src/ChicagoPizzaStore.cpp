@@ -11,7 +11,7 @@
 Pizza* ChicagoPizzaStore::createPizza(std::string type){
 
     PizzaIngredientFactory *_ingredientFactory = new ChicagoPizzaIngredientFactory();
-    Pizza* pizza;
+    Pizza* pizza = nullptr;
 
     if (type == "cheese") {
         pizza = new CheesePizza(_ingredientFactory);
@@ -26,7 +26,7 @@ Pizza* ChicagoPizzaStore::createPizza(std::string type){
         pizza = new VeggiePizza(_ingredientFactory);
         pizza->setName("Chicago Style Veggie Pizza");
     }
-    
+
     //delete _ingredientFactory;
     return pizza;
 }

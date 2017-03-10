@@ -10,7 +10,7 @@
 #define NYPIZZASTORE_H
 
 #include "PizzaStore.h"
-//#include "NYPizzaIngredientFactory.h"
+#include "NYPizzaIngredientFactory.h"
 
 class NYPizzaStore : public PizzaStore {
 protected:
